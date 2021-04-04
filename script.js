@@ -5,6 +5,23 @@ const goods = [
     { title: 'Shoes', price: 250 },
   ];
   
+
+class Header { 
+  constructor () {
+  this.$container = document.querySelector (`header`);
+  this.$button = this.$container.querySelector (`.cart-button`);
+  this.$search = this.$container.querySelector (`#search `);
+}
+  setSearchHandler (callback) {
+  this.$search.addEventListener (`input`, callback);
+}
+  setButtonHandler (callback) { 
+ this.$button.addEventListener (`click`, callback );
+}
+}
+
+
+
 const $goodsList = document.querySelector (`.goods-list`);
 
   const renderGoodsItem = ({title, price}) => {
