@@ -47,6 +47,5 @@
 }
 
 .goods-list { 
-    flex-direction: row;
-    display: inline; 
+    display: flex; 
 }
